@@ -1,4 +1,4 @@
-# Shobu backend
+# Prisma server template
 
 ## Playground
 ```
