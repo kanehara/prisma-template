@@ -1,0 +1,21 @@
+scalar DateTime
+
+type Query {
+  empty: String # to allow for extending this type
+}
+
+type Mutation {
+  empty: String # to allow for extending this type
+}
+
+type Subscription {
+  empty: String # to allow for extending this type
+}
+
+input PaginationInput {
+  after: String
+  first: Int
+  before: String
+  last: Int
+  skip: Int
+}

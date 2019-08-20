@@ -1,0 +1,39 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+  resetToken: String
+  resetTokenExpiry: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+extend type Query {
+  user(where: UserWhereUniqueInput!): User
+}
+
+extend type Mutation {
+  createUser(data: UserCreateInput!): User!
+  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User!
+  deleteUser(where: UserWhereUniqueInput!): User!
+}
+
+input UserCreateInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+}
+
+input UserUpdateInput {
+  firstName: String
+  lastName: String
+  email: String
+}
+
+input UserWhereUniqueInput {
+  id: ID
+  email: String
+}

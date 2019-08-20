@@ -1,0 +1,12 @@
+schema: 
+  - ./resolver/*.graphql
+exec:
+  filename: gqlgen/exec.go
+model:
+  filename: gqlgen/models.go
+resolver:
+  filename: gqlgen/tmp/resolver.go
+  type: Resolver
+models:
+  User:
+    model: github.com/kanehara/prisma-template/prisma.User
